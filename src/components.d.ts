@@ -7,6 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface MyComponent {
+        "myfunc": () => void;
         "mytext": string;
         "mytext2": string;
     }
@@ -24,6 +25,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface MyComponent {
+        "myfunc"?: () => void;
         "mytext"?: string;
         "mytext2"?: string;
     }

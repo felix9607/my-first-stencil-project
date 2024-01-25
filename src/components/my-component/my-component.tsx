@@ -10,17 +10,16 @@ import "@ui5/webcomponents/dist/Button.js";
 export class MyComponent {
   @Prop() mytext ='default';
   @Prop() mytext2 ='default2';
+  @Prop() myfunc: () => void;
 
-  /*private getText(): string {
-    return this.text;
-  }*/
   render() {
     return (
     <Host>
       <span>Hello</span>
       <div>{this.mytext}</div>
       <div>{this.mytext2}</div>
-      <ui5-button>Button</ui5-button>
-    </Host>);
+      <ui5-button onClick={this.myfunc}>Button</ui5-button>
+    </Host>
+    );
   }
 }
